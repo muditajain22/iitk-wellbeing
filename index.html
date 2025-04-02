@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IITK Wellbeing | Institute Counselling Service</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <style>
       body {
         font-family: 'Segoe UI', sans-serif;
-      }
-      .section:hover {
-        transform: translateY(-4px) scale(1.01);
-        transition: transform 0.2s ease-in-out;
       }
     </style>
   </head>
@@ -24,38 +20,81 @@
       </div>
     </header>
 
+    <section class="bg-white py-10">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Your wellbeing matters ❤️</h2>
+          <p class="text-gray-600 mb-4 text-lg">
+            This platform is your one-stop destination for emotional support, academic aid,
+            and personal growth. Explore resources for every challenge, all in one place.
+          </p>
+        </div>
+        <lottie-player
+          src="https://lottie.host/7e9b63de-9f18-4654-b96e-d8d86e45158b/sPDE8sLqkW.json"
+          background="transparent"
+          speed="1"
+          style="width: 100%; height: 300px;"
+          loop autoplay>
+        </lottie-player>
+      </div>
+    </section>
+
     <main class="max-w-6xl mx-auto px-6 py-10">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <a href="#" class="section block bg-white shadow-md hover:shadow-xl p-6 rounded-xl transition duration-200 ease-in-out">
-          <img src="images/academics.png" class="w-16 h-16 mb-4" alt="Academics" />
-          <h3 class="text-xl font-bold mb-2">📘 Academics</h3>
-          <p class="text-sm text-gray-600">Exam stress, motivation, time management</p>
-        </a>
-        <a href="#" class="section block bg-white shadow-md hover:shadow-xl p-6 rounded-xl transition duration-200 ease-in-out">
-          <img src="images/mental_health.png" class="w-16 h-16 mb-4" alt="Mental Health" />
-          <h3 class="text-xl font-bold mb-2">🧠 Mental Health</h3>
-          <p class="text-sm text-gray-600">Anxiety, depression, burnout, emotional distress</p>
-        </a>
-        <a href="#" class="section block bg-white shadow-md hover:shadow-xl p-6 rounded-xl transition duration-200 ease-in-out">
-          <img src="images/relationships.png" class="w-16 h-16 mb-4" alt="Relationships" />
-          <h3 class="text-xl font-bold mb-2">🤝 Relationships</h3>
-          <p class="text-sm text-gray-600">Friendships, conflicts, intimacy, family</p>
-        </a>
-        <a href="#" class="section block bg-white shadow-md hover:shadow-xl p-6 rounded-xl transition duration-200 ease-in-out">
-          <img src="images/resources.png" class="w-16 h-16 mb-4" alt="Resources" />
-          <h3 class="text-xl font-bold mb-2">🧰 Resources</h3>
-          <p class="text-sm text-gray-600">Counsellors, helplines, external links</p>
-        </a>
-        <a href="#" class="section block bg-white shadow-md hover:shadow-xl p-6 rounded-xl transition duration-200 ease-in-out">
-          <img src="images/mth.png" class="w-16 h-16 mb-4" alt="MTH Material" />
-          <h3 class="text-xl font-bold mb-2">📚 MTH Course Material</h3>
-          <p class="text-sm text-gray-600">PYQs, assignments, notes — all in one place</p>
-        </a>
-        <a href="#" class="section block bg-white shadow-md hover:shadow-xl p-6 rounded-xl transition duration-200 ease-in-out">
-          <img src="images/events.png" class="w-16 h-16 mb-4" alt="Events" />
-          <h3 class="text-xl font-bold mb-2">📅 Events & Workshops</h3>
-          <p class="text-sm text-gray-600">Upcoming ICS activities to boost your wellbeing</p>
-        </a>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card Template -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="./images/academics.png" alt="Academics" class="w-full h-48 object-cover" />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-[#1d3557] mb-2">Academics</h3>
+            <p class="text-gray-600 text-sm">Exam stress, motivation, time management</p>
+            <a href="#" class="mt-3 inline-block bg-[#1d3557] text-white text-sm px-4 py-2 rounded-full">KNOW MORE</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="./images/mental_health.png" alt="Mental Health" class="w-full h-48 object-cover" />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-[#1d3557] mb-2">Mental Health</h3>
+            <p class="text-gray-600 text-sm">Anxiety, burnout, emotional wellbeing</p>
+            <a href="#" class="mt-3 inline-block bg-[#1d3557] text-white text-sm px-4 py-2 rounded-full">KNOW MORE</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="./images/relationships.png" alt="Relationships" class="w-full h-48 object-cover" />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-[#1d3557] mb-2">Relationships</h3>
+            <p class="text-gray-600 text-sm">Friends, intimacy, family conflicts</p>
+            <a href="#" class="mt-3 inline-block bg-[#1d3557] text-white text-sm px-4 py-2 rounded-full">KNOW MORE</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="./images/resources.png" alt="Resources" class="w-full h-48 object-cover" />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-[#1d3557] mb-2">Resources</h3>
+            <p class="text-gray-600 text-sm">Helplines, support, self-help guides</p>
+            <a href="#" class="mt-3 inline-block bg-[#1d3557] text-white text-sm px-4 py-2 rounded-full">KNOW MORE</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="./images/mth.png" alt="MTH Course Material" class="w-full h-48 object-cover" />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-[#1d3557] mb-2">MTH Course Material</h3>
+            <p class="text-gray-600 text-sm">PYQs, assignments, notes</p>
+            <a href="mth111.html" class="mt-3 inline-block bg-[#1d3557] text-white text-sm px-4 py-2 rounded-full">KNOW MORE</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="./images/events.png" alt="Events & Workshops" class="w-full h-48 object-cover" />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold text-[#1d3557] mb-2">Events & Workshops</h3>
+            <p class="text-gray-600 text-sm">ICS programs to boost wellbeing</p>
+            <a href="#" class="mt-3 inline-block bg-[#1d3557] text-white text-sm px-4 py-2 rounded-full">KNOW MORE</a>
+          </div>
+        </div>
       </div>
     </main>
 
