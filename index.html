@@ -13,26 +13,54 @@
     </style>
   </head>
   <body class="bg-[#f4f9f9] text-[#1d3557]">
-
-    <!-- Fullscreen Background Slider -->
+ <!-- Background Slider Section -->
     <section class="relative h-[100vh] overflow-hidden">
-      <!-- Image slider -->
       <div class="absolute inset-0 z-0">
-        <div class="slider h-full w-full">
-          <div class="slide bg-cover bg-center h-full w-full transition-opacity duration-1000 opacity-100" style="background-image: url('./images/img1.jpg');"></div>
-          <div class="slide bg-cover bg-center h-full w-full transition-opacity duration-1000 opacity-0" style="background-image: url('./images/img2.jpg');"></div>
-          <div class="slide bg-cover bg-center h-full w-full transition-opacity duration-1000 opacity-0" style="background-image: url('./images/img3.jpeg');"></div>
-          <div class="slide bg-cover bg-center h-full w-full transition-opacity duration-1000 opacity-0" style="background-image: url('./images/img4.jpg');"></div>
-          <div class="slide bg-cover bg-center h-full w-full transition-opacity duration-1000 opacity-0" style="background-image: url('./images/img5.jpg');"></div>
+        <div class="slider h-full w-full relative">
+          <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100" style="background-image: url('./images/img1.jpg');"></div>
+          <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('./images/img2.jpg');"></div>
+          <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('./images/img3.jpeg');"></div>
+          <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('./images/img4.jpg');"></div>
+          <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('./images/img5.jpg');"></div>
         </div>
       </div>
 
-      <!-- IITK Wellbeing Title Over Slider -->
+      <!-- Manual Controls -->
+      <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 flex gap-3">
+        <button class="bg-white/70 hover:bg-white/90 text-[#1d3557] font-bold px-4 py-2 rounded" onclick="prevSlide()">Prev</button>
+        <button class="bg-white/70 hover:bg-white/90 text-[#1d3557] font-bold px-4 py-2 rounded" onclick="nextSlide()">Next</button>
+      </div>
+
+      <!-- Overlay Text -->
       <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center backdrop-blur-sm bg-black/40 px-4">
         <h1 class="text-5xl md:text-6xl font-extrabold drop-shadow-lg">IITK Wellbeing</h1>
         <p class="mt-4 text-xl md:text-2xl font-medium drop-shadow-lg">Institute Counselling Service, IIT Kanpur</p>
       </div>
     </section>
+
+    <!-- JavaScript for Background Slider -->
+    <script>
+      const slides = document.querySelectorAll('.slide');
+      let index = 0;
+
+      function showSlide(newIndex) {
+        slides[index].classList.remove('opacity-100');
+        slides[index].classList.add('opacity-0');
+        index = (newIndex + slides.length) % slides.length;
+        slides[index].classList.remove('opacity-0');
+        slides[index].classList.add('opacity-100');
+      }
+
+      function nextSlide() {
+        showSlide(index + 1);
+      }
+
+      function prevSlide() {
+        showSlide(index - 1);
+      }
+
+      setInterval(nextSlide, 5000);
+    </script>
 
     <!-- Hero Section -->
     <section class="bg-white py-10">
